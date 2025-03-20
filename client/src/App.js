@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import logo from './logo.png'; // Updated logo import
 
 function App() {
     const [jobs, setJobs] = useState([]);
@@ -15,7 +14,6 @@ function App() {
     return (
         <div className="App">
             <div className="hero-section">
-                <img src="/logo.png" alt="All Jobs Hub Logo" className="logo" />
                 <h1>All Jobs Hub</h1>
                 <p>Your Trusted Job Portal for All Careers</p>
             </div>
@@ -36,4 +34,3 @@ function App() {
 }
 
 export default App;
-
