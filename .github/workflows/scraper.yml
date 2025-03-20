@@ -1,0 +1,32 @@
+name: Scrape Jobs Daily
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Runs every day at 2 AM
+  workflow_dispatch:     # Allows manual trigger if needed
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4 requests
+
+      - name: Run scraper
+        run: python scraper/job_scraper.py
+
+      - name: Commit and Push Updated Jobs
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add jobs.json
+          git commit -m "Auto-update jobs list" || echo "No changes to commit"
+          git push
