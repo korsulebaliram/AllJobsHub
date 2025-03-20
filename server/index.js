@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
+
 const PORT = process.env.PORT || 3001;
 
 // Endpoint to serve job listings
@@ -22,6 +23,7 @@ app.get('/api/jobs', (req, res) => {
     });
 });
 
+// Start the server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
