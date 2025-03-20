@@ -7,7 +7,10 @@ const PORT = process.env.PORT || 3001;
 
 // Endpoint to serve job listings
 app.get('/api/jobs', (req, res) => {
-    const filePath = path.join(__dirname, '../jobs.json');
+    const jobs = JSON.parse(fs.readFileSync('../jobs.json'));
+    res.json(jobs);
+});
+
 
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
