@@ -1,22 +1,31 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #0B2447; /* Deep Blue Background */
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
 .hero-section {
-    background-image: url('https://source.unsplash.com/1600x400/?career,jobs');
-    background-size: cover;
-    background-position: center;
-    color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
+    background-color: #1B3A57;
+    border-bottom: 5px solid #4CAF50;
 }
+
+    .hero-section .logo {
+        width: 100px;
+        margin-bottom: 15px;
+    }
 
     .hero-section h1 {
         font-size: 3rem;
-        margin: 0;
+        color: #FFD700; /* Gold Text */
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+        color: #ddd; /* Soft White Text */
     }
 
 .jobs-container {
@@ -27,13 +36,17 @@ body {
 }
 
 .job-card {
-    background-color: #fff;
+    background-color: #2B4F74;
     border: 2px solid #4CAF50;
-    border-radius: 12px;
+    border-radius: 15px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
+
+    .job-card h3 {
+        color: #FFD700; /* Gold Text */
+    }
 
     .job-card a {
         display: inline-block;
@@ -43,4 +56,9 @@ body {
         color: #fff;
         text-decoration: none;
         border-radius: 20px;
+        transition: background 0.3s ease;
     }
+
+        .job-card a:hover {
+            background-color: #45A049;
+        }
