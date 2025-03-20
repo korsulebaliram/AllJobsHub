@@ -15,7 +15,7 @@ function App() {
     return (
         <div className="App">
             <div className="hero-section">
-                <img src={logo} alt="All Jobs Hub Logo" className="logo" />
+                <img src="/logo.png" alt="All Jobs Hub Logo" className="logo" />
                 <h1>All Jobs Hub</h1>
                 <p>Your Trusted Job Portal for All Careers</p>
             </div>
